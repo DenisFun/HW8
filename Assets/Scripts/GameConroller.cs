@@ -9,7 +9,7 @@ public class GameConroller : MonoBehaviour
 	[SerializeField]
 	private CloudController m_cloudController;
 	[SerializeField]
-	private Change m_toolsChange;
+	private ToolsChange m_toolsChange;
 	void Update()
     {
         if (Input.GetKeyDown(KeyCode.X))
@@ -23,7 +23,7 @@ public class GameConroller : MonoBehaviour
 		}
 		if(Input.GetKeyDown(KeyCode.Space))
 		{
-			m_toolsChange.ChangeTools();
+			m_toolsChange.Action();
 		}
     }
 }
