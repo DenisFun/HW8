@@ -26,7 +26,7 @@ public class CloudController : MonoBehaviour
 			}
 		}
 	}
-private void Update()
+	private void Update()
 	{
 		MoveToHuman();
 	}
