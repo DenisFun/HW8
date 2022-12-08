@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class SpawnStone : MonoBehaviour
 {
-    public GameObject Stone;
-    public GameObject Pos;
+	[SerializeField]
+    private GameObject m_prefabStone;
 
-    void Update() 
+    public void Spawn() 
     {
-        if(Input.GetKeyDown(KeyCode.X))
-        {
-            Destroy(Instantiate(Stone, Pos.transform.position, Quaternion.identity), 20f);
-        }
+		Vector3 position = transform.position;
+		Quaternion rotation = transform.rotation;
+        Destroy(Instantiate(m_prefabStone, position, rotation), 20f);
     }
 }

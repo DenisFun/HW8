@@ -7,12 +7,8 @@ public class Change : MonoBehaviour
 
     public MeshFilter CurrentTools;
     public Mesh NewTools;
-
-    void Update()
+    public void ChangeTools()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
             CurrentTools.mesh = NewTools;
-        }
     }
 }
